@@ -103,9 +103,9 @@ Markup: -- unordered list
 
 _Image with alt :_
 
-![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
+![picture alt](thethaw_header.jpg "Title is optional")
 
-    Markup : ![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
+    Markup : ![picture alt](thethaw_header.jpg "Title is optional")
 
 ---
 
