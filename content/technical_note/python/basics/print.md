@@ -84,6 +84,15 @@ print(f'With general notation is {10**-6:g}')
     With general notation is 1e-06
 
 
+### Formatting columns with text
+
+
+```python
+some_number=23
+some_other_number = 2.23432
+print(f'{"d1=0:":<20} limit = {some_number:.3f} \timpact = {some_other_number:.3%}')
+```
+
 ### Indexing 
 Not quite about printing, but a good illustration of what to expect
 
