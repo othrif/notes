@@ -93,6 +93,9 @@ some_other_number = 2.23432
 print(f'{"d1=0:":<20} limit = {some_number:.3f} \timpact = {some_other_number:.3%}')
 ```
 
+    d1=0:                limit = 23.000 	impact = 223.432%
+
+
 ### Indexing 
 Not quite about printing, but a good illustration of what to expect
 
