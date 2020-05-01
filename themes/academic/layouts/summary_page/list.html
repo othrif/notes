@@ -199,6 +199,33 @@
         </div>
 
 <!-----------------------------------------------------------------------------
+                                C++
+------------------------------------------------------------------------------>
+        <div class="row" id="python">
+            <div class="col-sm-12">
+                <h3 class="category_header">C++</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Basics</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "technical_note/cpp/basics" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-----------------------------------------------------------------------------
                                 END
 ------------------------------------------------------------------------------>
     </div>

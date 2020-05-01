@@ -8,13 +8,13 @@ draft: false
 
 ### Grep commands
 
-#### Count occurences 
-``` bash 
+#### Count occurences
+``` bash
 grep -c '<event>'
 ```
 
 ### Concatenate PDFs
-``` bash 
+``` bash
 gs -q -sPAPERSIZE=letter -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=out.pdf in1.pdf in2.pdf in3.pdf
 ```
 
@@ -25,7 +25,7 @@ echo mc16_13TeV.366035.Sh_221_NN30NNLO_Znunu_PTV280_500_CVetoBVeto.recon.AOD.e70
 ```
 
 ### Find pattern anywhere recursively
-``` bash 
+``` bash
 grep -rnw '/path/to/somewhere/' -e 'pattern'
 ```
 
@@ -70,3 +70,9 @@ pkill -KILL -u othrif
 ``` bash
 dos2unix <filename>
 ```
+
+###  Device or resource busy
+``` bash
+lsof +D <path>
+```
+Then kill PID with `kill -9 <PID>`
