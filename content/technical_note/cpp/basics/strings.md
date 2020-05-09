@@ -94,6 +94,47 @@ if(str == " ")
     This sentence.
 
 
+### Copy string to char array
+
+
+```c++
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std;
+```
+
+
+```c++
+{std::string s = "Hello World!";
+
+char cstr[s.size() + 1]; // +1 for /0 character
+strcpy(cstr, s.c_str()); // or pass &s[0]
+
+std::cout << cstr << '\n';
+}
+```
+
+    Hello World!
+
+
+alternatively, if you will not remember `strcpy`:
+
+
+```c++
+{
+    std::string s = "Hello World!";
+    char cstr[s.size() + 1]; // +1 for /0 character
+    for (int i=0; i<s.size(); i++)
+        cstr[i] = s[i];
+    std::cout << cstr << '\n';
+    
+}
+```
+
+    Hello World!
+
+
 
 ```c++
 
