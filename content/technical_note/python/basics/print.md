@@ -96,44 +96,6 @@ print(f'{"d1=0:":<20} limit = {some_number:.3f} \timpact = {some_other_number:.3
     d1=0:                limit = 23.000 	impact = 223.432%
 
 
-### Indexing 
-Not quite about printing, but a good illustration of what to expect
-
-
-```python
-txt = 'Hello World'
-print(f'Particular element: {txt[0]}')
-print(f'substring: {txt[0:5]}')
-print(f'substring: {txt[:5]}')
-print(f'substring: {txt[0:-6]}')
-print(f'substring: {txt[6:]}')
-print(f'skip 2: {txt[::2]}')
-print(f'skip 3: {txt[::3]}')
-print(f'Invert order: {txt[::-1]}')
-print(f'String length: {len(txt)}')
-print(f'Repetition: {"."*10}')
-print(f'Concatenation: {txt+" from Hamburg!"}')
-print(f'Escape characters...')
-print(f'few examples in this line: \'\"123\b \thorizontal')
-print(f'1234567 carriage return \rXXX')
-```
-
-    Particular element: H
-    substring: Hello
-    substring: Hello
-    substring: Hello
-    substring: World
-    skip 2: HloWrd
-    skip 3: HlWl
-    Invert order: dlroW olleH
-    String length: 11
-    Repetition: ..........
-    Concatenation: Hello World from Hamburg!
-    Escape characters...
-    few examples in this line: '"12 	horizontal
-    XXX4567 carriage return 
-
-
 ### Casting
 Same as above, not related to printing but gives a good illustration
 
