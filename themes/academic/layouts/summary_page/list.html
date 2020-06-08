@@ -98,6 +98,60 @@
             </div>
         </div>
 
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Numpy</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "technical_note/python/numpy" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Matplotlib</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "technical_note/python/matplotlib" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Pandas</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "technical_note/python/pandas" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!-----------------------------------------------------------------------------
                                 LINUX
 ------------------------------------------------------------------------------>

@@ -154,6 +154,32 @@ np.fromiter(generator_expression, dtype=int)
 
 
 
+###  Subset numpy arrays
+
+
+```python
+x = [4 , 9 , 6, 3, 1]
+y = np.array(x)
+y[1]
+high = y > 5
+y[high]
+```
+
+
+
+
+    array([9, 6])
+
+
+
+
+```python
+print(y[high])
+```
+
+    [9 6]
+
+
 
 ```python
 

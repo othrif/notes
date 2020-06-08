@@ -73,6 +73,86 @@ type(my_list)
 
 
 
+### Subsetting a list
+`list[inclusive:exluive]`
+
+
+```python
+my_list[1:3]
+```
+
+
+
+
+    ['banans', 'apples']
+
+
+
+### Del element
+
+
+```python
+my_list
+```
+
+
+
+
+    ['Hello world!', 'banans', 'apples', 'add one more', 'another', 'even more']
+
+
+
+
+```python
+del(my_list[1])
+```
+
+
+```python
+my_list
+```
+
+
+
+
+    ['Hello world!', 'apples', 'add one more', 'another', 'even more']
+
+
+
+#### Copy list with `list()`
+- `list1 = list0` allows the list to point to the same memory area. Any changes to `list1` will affect `list0`
+- To copy `list()` or `[:]`, use the syntax: `list1=list(list0)` or `list1=list0[:]`
+
+
+```python
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+print(f'before after: {areas}')
+
+# Create areas_copy
+areas_copy1 = areas
+areas_copy2 = list(areas)
+areas_copy3 = areas[:]
+
+# Change areas_copy
+areas_copy1[0] = 1.0
+areas_copy2[0] = 2.0
+areas_copy3[0] = 3.0
+
+# Print areas
+print(f'areas after: {areas}')
+print(f'areas_copy1 after: {areas_copy1}')
+print(f'areas_copy2 after: {areas_copy2}')
+print(f'areas_copy3 after: {areas_copy3}')
+```
+
+    before after: [11.25, 18.0, 20.0, 10.75, 9.5]
+    areas after: [1.0, 18.0, 20.0, 10.75, 9.5]
+    areas_copy1 after: [1.0, 18.0, 20.0, 10.75, 9.5]
+    areas_copy2 after: [2.0, 18.0, 20.0, 10.75, 9.5]
+    areas_copy3 after: [3.0, 18.0, 20.0, 10.75, 9.5]
+
+
 ### Tuples
 Tuples are immutable
 

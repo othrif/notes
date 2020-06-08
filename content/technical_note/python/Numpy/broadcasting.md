@@ -11,9 +11,10 @@ import numpy as np
 ```
 
 ### Broadcasting
-Broadcast- ing allows us to perform vectorized operations between two arrays even if their dimensions do not match by creating implicit multidimensional grids
+Broadcasting allows us to perform vectorized operations between two arrays even if their dimensions do not match by creating implicit multidimensional grids
 
 different dimensions:
+
 
 
 ```python
@@ -86,8 +87,3 @@ ary3 + np.array([[2], [3]])
            [4, 5, 6]])
 
 
-
-
-```python
-
-```
