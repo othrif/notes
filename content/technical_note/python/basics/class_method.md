@@ -9,7 +9,7 @@ draft: false
 
 
 ```python
-class vehicle:
+class Vehicle:
   def __init__(self,color):
     self.color=color
   def start(self):
@@ -20,7 +20,7 @@ class vehicle:
 
 
 ```python
-car=vehicle('black')
+car=Vehicle('black')
 ```
 
 
@@ -38,3 +38,43 @@ car.showcolor()
 
     I am black
 
+
+
+```python
+class MyCounter:
+    """Here is the doc string!"""
+    def __init__(self, n=10):
+        self.count = n
+        
+    def set_count(self,n):
+        print()
+
+me = MyCounter()
+me.set_count(10)
+print(me.count)
+```
+
+    10
+
+
+
+```python
+Sqrt(4)
+```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-4-25bc9fec10b4> in <module>
+    ----> 1 Sqrt(4)
+    
+
+    NameError: name 'Sqrt' is not defined
+
+
+
+```python
+
+```
