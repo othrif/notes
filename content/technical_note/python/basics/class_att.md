@@ -1,5 +1,5 @@
 ---
-title: "Class-level attributes and alternative constructors"
+title: "Class-level attributes, alternative constructors, and inheritance of class methods"
 date: 2020-04-12T14:41:32+02:00
 author: "Othmane Rifki"
 type: technical_note
@@ -75,8 +75,8 @@ print(Player.MAX_SPEED)
 ```
 
     MAX_SPEED of p1 and p2 before assignment:
-    3
-    3
+    7
+    7
     MAX_SPEED of p1 and p2 after assignment of class attribute:
     7
     7
@@ -152,7 +152,32 @@ print(bd.day)
     3
 
 
+### Inheritance of class methods
+To customize the parent's class method in a child class, start with a `@classmethod` decorator, and define a method with the same name in the child's class, just like you did with regular methods.
+
+The only difference is that to call the parent's class method within the child's method, you can use `ClassName.method_name(args...)` without passing `self` or `cls`.
+
 
 ```python
-
+# Define an EvenBetterDate class and customize from_str
+class EvenBetterDate(BetterDate):
+    @classmethod
+    def from_str(self, datestr, format='YYYY-MM-DD'):
+        if format=='YYYY-MM-DD':
+            return BetterDate.from_str(datestr)
+        elif format == 'DD-MM-YYYY':
+            day,month,year = datestr.split('-')
+            return BetterDate.from_str(('-').join([year, month, day]))
 ```
+
+
+```python
+ebd_str = EvenBetterDate.from_str('02-12-2019', format='DD-MM-YYYY')
+print(ebd_str.year)
+ebd_dt = EvenBetterDate.from_datetime(datetime.today())
+print(ebd_dt.year)
+```
+
+    2019
+    2020
+

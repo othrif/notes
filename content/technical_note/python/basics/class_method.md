@@ -1,5 +1,5 @@
 ---
-title: "Method beloning to a class object"
+title: "Method belonging to a class object"
 date: 2020-04-12T14:41:32+02:00
 author: "Othmane Rifki"
 type: technical_note
@@ -56,25 +56,3 @@ print(me.count)
 
     10
 
-
-
-```python
-Sqrt(4)
-```
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-4-25bc9fec10b4> in <module>
-    ----> 1 Sqrt(4)
-    
-
-    NameError: name 'Sqrt' is not defined
-
-
-
-```python
-
-```
