@@ -5,7 +5,16 @@ author: "Othmane Rifki"
 type: technical_note
 draft: false
 ---
-### Error handling with try-except
+### Error handling with try-except-finally
+Syntax:
+``` python
+try: 
+    # code that might raise an error
+except:
+    # do something about the error
+finally:
+    # this code runs no matter what 
+```
 
 
 ```python
@@ -79,3 +88,13 @@ shout_echo("particle", echo=-5)
 
     ValueError: echo must be greater than or equal to 0
 
+
+### Common errors:
+- `AttributeError`
+- `ValueError`
+- `TypeError`
+
+
+```python
+
+```
