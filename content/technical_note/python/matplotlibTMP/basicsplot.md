@@ -28,7 +28,19 @@ plt.show()
 ```
 
 
-![png](basics_3_0.png)
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-2-cb2c01bc2d6f> in <module>
+          1 x = [1, 2, 3, 4,10]
+          2 y = [10, 15, 17, 20,30]
+    ----> 3 plt.plot(x,y)
+          4 
+          5 plt.xlabel('x-label')
+
+
+    NameError: name 'plt' is not defined
 
 
 ### Scatter plot
@@ -41,7 +53,7 @@ plt.show()
 ```
 
 
-![png](basics_5_0.png)
+![png](basicsplot_5_0.png)
 
 
 #### Change size of bullets
@@ -61,7 +73,7 @@ plt.scatter(x,y,s=size)
 
 
 
-![png](basics_7_1.png)
+![png](basicsplot_7_1.png)
 
 
 #### Add colours
@@ -81,7 +93,7 @@ plt.scatter(x,y,s=size,c=col)
 
 
 
-![png](basics_9_1.png)
+![png](basicsplot_9_1.png)
 
 
 #### make transparent
@@ -101,7 +113,7 @@ plt.scatter(x,y,s=size,c=col, alpha=0.5)
 
 
 
-![png](basics_11_1.png)
+![png](basicsplot_11_1.png)
 
 
 #### Add text and grid
@@ -123,7 +135,7 @@ plt.show()
 ```
 
 
-![png](basics_13_0.png)
+![png](basicsplot_13_0.png)
 
 
 ### Histogram
@@ -141,7 +153,7 @@ plt.show()
 ```
 
 
-![png](basics_16_0.png)
+![png](basicsplot_16_0.png)
 
 
 
@@ -160,7 +172,7 @@ plt.show()
 ```
 
 
-![png](basics_18_0.png)
+![png](basicsplot_18_0.png)
 
 
 
