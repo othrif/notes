@@ -229,7 +229,7 @@
 <!-----------------------------------------------------------------------------
                                 Java
 ------------------------------------------------------------------------------>
-        <div class="row" id="python">
+        <div class="row" id="java">
             <div class="col-sm-12">
                 <h3 class="category_header">Java</h3>
             </div>
@@ -256,7 +256,7 @@
 <!-----------------------------------------------------------------------------
                                 C++
 ------------------------------------------------------------------------------>
-        <div class="row" id="python">
+        <div class="row" id="cpp">
             <div class="col-sm-12">
                 <h3 class="category_header">C++</h3>
             </div>
@@ -280,6 +280,33 @@
             </div>
         </div>
 
+
+<!-----------------------------------------------------------------------------
+                                MATHEMATICS
+------------------------------------------------------------------------------>
+        <div class="row" id="math">
+            <div class="col-sm-12">
+                <h3 class="category_header">Mathematics</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Statistics</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "technical_note/math/stats" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!-----------------------------------------------------------------------------
                                 END
 ------------------------------------------------------------------------------>
