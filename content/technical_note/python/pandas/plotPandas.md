@@ -176,7 +176,7 @@ nb_sold_by_type.plot(kind='bar')
 
 
 
-![png](plotPandas_6_1.png)
+![png](plotPandas_files/plotPandas_6_1.png)
 
 
 ### Plot data with line
@@ -194,7 +194,7 @@ plt.show()
 ```
 
 
-![png](plotPandas_8_0.png)
+![png](plotPandas_files/plotPandas_8_0.png)
 
 
 ### Plot with scatter
@@ -209,7 +209,7 @@ plt.show()
 ```
 
 
-![png](plotPandas_10_0.png)
+![png](plotPandas_files/plotPandas_10_0.png)
 
 
 ### Plot with histograms
@@ -230,7 +230,7 @@ plt.show()
 ```
 
 
-![png](plotPandas_12_0.png)
+![png](plotPandas_files/plotPandas_12_0.png)
 
 
 

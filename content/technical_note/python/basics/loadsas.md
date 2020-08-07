@@ -39,7 +39,7 @@ plt.show()
 
 
 
-![png](loadsas_2_1.png)
+![png](loadsas_files/loadsas_2_1.png)
 
 
 ### Stata files
@@ -91,7 +91,7 @@ plt.show()
 
 
 
-![png](loadsas_4_1.png)
+![png](loadsas_files/loadsas_4_1.png)
 
 
 

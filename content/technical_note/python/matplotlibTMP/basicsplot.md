@@ -53,7 +53,7 @@ plt.show()
 ```
 
 
-![png](basicsplot_5_0.png)
+![png](basicsplot_files/basicsplot_5_0.png)
 
 
 #### Change size of bullets
@@ -73,7 +73,7 @@ plt.scatter(x,y,s=size)
 
 
 
-![png](basicsplot_7_1.png)
+![png](basicsplot_files/basicsplot_7_1.png)
 
 
 #### Add colours
@@ -93,7 +93,7 @@ plt.scatter(x,y,s=size,c=col)
 
 
 
-![png](basicsplot_9_1.png)
+![png](basicsplot_files/basicsplot_9_1.png)
 
 
 #### make transparent
@@ -113,7 +113,7 @@ plt.scatter(x,y,s=size,c=col, alpha=0.5)
 
 
 
-![png](basicsplot_11_1.png)
+![png](basicsplot_files/basicsplot_11_1.png)
 
 
 #### Add text and grid
@@ -135,7 +135,7 @@ plt.show()
 ```
 
 
-![png](basicsplot_13_0.png)
+![png](basicsplot_files/basicsplot_13_0.png)
 
 
 ### Histogram
@@ -153,7 +153,7 @@ plt.show()
 ```
 
 
-![png](basicsplot_16_0.png)
+![png](basicsplot_files/basicsplot_16_0.png)
 
 
 
@@ -172,7 +172,7 @@ plt.show()
 ```
 
 
-![png](basicsplot_18_0.png)
+![png](basicsplot_files/basicsplot_18_0.png)
 
 
 

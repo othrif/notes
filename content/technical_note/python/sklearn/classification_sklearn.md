@@ -171,7 +171,7 @@ _ = pd.plotting.scatter_matrix(df, c = y, figsize = [8,8], s = 150, marker = 'D'
 ```
 
 
-![png](classification_sklearn_11_0.png)
+![png](classification_sklearn_files/classification_sklearn_11_0.png)
 
 
 

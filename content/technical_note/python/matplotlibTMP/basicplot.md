@@ -1,10 +1,17 @@
 ---
-title: "Test plotting"
+title: "Basic plotting"
 date: 2020-04-12T14:41:32+02:00
 author: "Othmane Rifki"
 type: technical_note
 draft: false
 ---
+### Useful links:
+- Gallery of example plots: https://matplotlib.org/3.1.1/gallery/index.html
+- visualizing images: https://matplotlib.org/3.1.1/tutorials/introductory/images.html
+- Animations: https://matplotlib.org/3.1.1/api/animation_api.html
+- Geospatial data: https://scitools.org.uk/cartopy/docs/v0.15/matplotlib/intro.html
+- Statistical visualization (Pandas + Matplotlib): https://seaborn.pydata.org/examples/index.html
+
 
 ```python
 import numpy as np
@@ -29,7 +36,7 @@ plt.show()
 ```
 
 
-![png](basicplot_3_0.png)
+![png](basicplot_files/basicplot_4_0.png)
 
 
 

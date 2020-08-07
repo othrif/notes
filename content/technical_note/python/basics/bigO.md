@@ -60,5 +60,5 @@ for n,s in enumerate(scores):
 ```
 
 
-![png](bigO_3_0.png)
+![png](bigO_files/bigO_3_0.png)
 
