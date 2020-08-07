@@ -35,5 +35,5 @@ plt.show()
 ```
 
 
-![png](histplot_files/histplot_2_0.png)
+![png](histplot_2_0.png)
 

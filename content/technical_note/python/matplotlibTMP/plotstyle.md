@@ -44,7 +44,7 @@ plot_style('default')
 ```
 
 
-![png](plotstyle_files/plotstyle_5_0.png)
+![png](plotstyle_5_0.png)
 
 
 ### ggplot R style
@@ -55,7 +55,7 @@ plot_style('ggplot')
 ```
 
 
-![png](plotstyle_files/plotstyle_7_0.png)
+![png](plotstyle_7_0.png)
 
 
 ### style: bmh
@@ -66,7 +66,7 @@ plot_style('bmh')
 ```
 
 
-![png](plotstyle_files/plotstyle_9_0.png)
+![png](plotstyle_9_0.png)
 
 
 ### seaborn colorblind
@@ -77,7 +77,7 @@ plot_style('seaborn-colorblind')
 ```
 
 
-![png](plotstyle_files/plotstyle_11_0.png)
+![png](plotstyle_11_0.png)
 
 
 ### tableau colorblind
@@ -88,7 +88,7 @@ plot_style('tableau-colorblind10')
 ```
 
 
-![png](plotstyle_files/plotstyle_13_0.png)
+![png](plotstyle_13_0.png)
 
 
 ### black and white
@@ -99,5 +99,5 @@ plot_style('grayscale')
 ```
 
 
-![png](plotstyle_files/plotstyle_15_0.png)
+![png](plotstyle_15_0.png)
 

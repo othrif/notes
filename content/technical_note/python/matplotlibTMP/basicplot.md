@@ -36,7 +36,7 @@ plt.show()
 ```
 
 
-![png](basicplot_files/basicplot_4_0.png)
+![png](basicplot_4_0.png)
 
 
 

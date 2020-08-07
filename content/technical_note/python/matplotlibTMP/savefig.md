@@ -34,7 +34,7 @@ fig.savefig('temp_timeserie.jpg')
 ```
 
 
-![png](savefig_files/savefig_2_0.png)
+![png](savefig_2_0.png)
 
 
 

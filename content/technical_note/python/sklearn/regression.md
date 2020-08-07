@@ -69,7 +69,7 @@ print(f'Coefficient: {np.round(coef,2)}')
 ```
 
 
-![png](regression_files/regression_6_0.png)
+![png](regression_6_0.png)
 
 
     Coefficient: [0.72]
@@ -134,7 +134,7 @@ print(f'R-squared score: {r2:.2f}')
 ```
 
 
-![png](regression_files/regression_11_0.png)
+![png](regression_11_0.png)
 
 
     R-squared score: 1.00

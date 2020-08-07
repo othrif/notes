@@ -36,5 +36,5 @@ plt.show()
 ```
 
 
-![png](stackplot_files/stackplot_2_0.png)
+![png](stackplot_2_0.png)
 

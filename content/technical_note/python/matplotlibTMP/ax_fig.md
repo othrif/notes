@@ -44,5 +44,5 @@ plt.show()
 ```
 
 
-![png](ax_fig_files/ax_fig_3_0.png)
+![png](ax_fig_3_0.png)
 

@@ -61,7 +61,7 @@ plt.show()
 
 
 
-![png](loadmatlab_files/loadmatlab_3_1.png)
+![png](loadmatlab_3_1.png)
 
 
 

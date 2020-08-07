@@ -32,5 +32,5 @@ plt.show()
 ```
 
 
-![png](scatterplot_files/scatterplot_3_0.png)
+![png](scatterplot_3_0.png)
 

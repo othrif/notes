@@ -85,7 +85,7 @@ plt.show()
 
 
 
-![png](loadhdf5_files/loadhdf5_6_1.png)
+![png](loadhdf5_6_1.png)
 
 
 

@@ -54,5 +54,5 @@ plt.show()
 ```
 
 
-![png](sameplot_files/sameplot_4_0.png)
+![png](sameplot_4_0.png)
 

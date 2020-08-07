@@ -41,7 +41,7 @@ plt.show()
 ```
 
 
-![png](errorsplot_files/errorsplot_3_0.png)
+![png](errorsplot_3_0.png)
 
 
 ### Adding error-bars to a plot
@@ -63,7 +63,7 @@ plt.show()
 ```
 
 
-![png](errorsplot_files/errorsplot_5_0.png)
+![png](errorsplot_5_0.png)
 
 
 ### Creating boxplots
@@ -86,7 +86,7 @@ plt.show()
 ```
 
 
-![png](errorsplot_files/errorsplot_7_0.png)
+![png](errorsplot_7_0.png)
 
 
 
@@ -99,5 +99,5 @@ plt.show()
 ```
 
 
-![png](errorsplot_files/errorsplot_8_0.png)
+![png](errorsplot_8_0.png)
 

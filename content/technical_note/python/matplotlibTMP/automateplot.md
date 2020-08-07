@@ -57,5 +57,5 @@ fig.savefig('sports_weights.png')
 ```
 
 
-![png](automateplot_files/automateplot_5_0.png)
+![png](automateplot_5_0.png)
 
