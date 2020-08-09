@@ -1,5 +1,5 @@
 ---
-title: "Classification in Scikit-Learn with Iris"
+title: "Scatter matrix EDA"
 date: 2020-04-12T14:41:32+02:00
 author: "Othmane Rifki"
 type: technical_note
@@ -173,8 +173,3 @@ _ = pd.plotting.scatter_matrix(df, c = y, figsize = [8,8], s = 150, marker = 'D'
 
 ![png](classification_sklearn_11_0.png)
 
-
-
-```python
-
-```
