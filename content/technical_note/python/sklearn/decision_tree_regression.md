@@ -27,13 +27,6 @@ from sklearn.metrics import mean_squared_error as MSE
 # read csv into df
 wbc = pd.read_csv('auto.csv')
 wbc_data = pd.get_dummies(wbc, columns=["origin"])
-```
-
-
-```python
-# read csv into df
-wbc = pd.read_csv('auto.csv')
-wbc_data = pd.get_dummies(wbc, columns=["origin"])
 
 # Get features of interest and target labels
 X = wbc_data.iloc[:,1:]
