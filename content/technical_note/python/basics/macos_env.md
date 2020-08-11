@@ -83,3 +83,21 @@ Freeze dependencies after completing all installation of packages (a way to get 
 ``` bash 
 pip freeze
 ```
+
+### Installing kite for auto-completion in Jupyter
+``` bash 
+pip install jupyter-kite
+jupyter labextension install "@kiteco/jupyterlab-kite"
+```
+
+If you get the error 
+> Exception: Jupyter command `jupyter-lab` not found.
+
+then: 
+``` bash 
+pip uninstall -y jupyterlab
+pip install jupyterlab
+export PATH=$PATH:/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/bin
+pip install jupyter-kite
+jupyter labextension install "@kiteco/jupyterlab-kite"
+```
