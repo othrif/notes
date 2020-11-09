@@ -1,0 +1,131 @@
+{{ define "main" }}
+<main>
+    <div class="homepage">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>
+                    <span class="minor_line">Notes on Using</span>
+                    <br>
+                    <span class="major_line">Data Science and Machine Learning</span>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 blurb">
+                <p>
+                    <a href="about/othmane_rifki/">I am a principal applied scientist</a> at <a href="https://www.spectrumlabsai.com/">Spectrum Labs</a>. I have recently transitioned from particle physics research at <a href="http://cern.ch/">CERN</a> to machine learning research.
+                </p>
+                <p>
+                    This site is a collection of notes that I use for ease of reference to commonly used code snippets and to document some of the concepts I am learning. This site is inspired from <a href="https://github.com/chrisalbon/notes"> this repo.</a>
+                </p>
+            </div>
+        </div>
+
+
+
+<!-----------------------------------------------------------------------------
+                                PYTHON
+------------------------------------------------------------------------------>
+        <div class="row" id="python">
+            <div class="col-sm-12">
+                <h3 class="category_header">Python</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Basics</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/python/basics" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-----------------------------------------------------------------------------
+                                PYTHON
+------------------------------------------------------------------------------>
+        <div class="row" id="test">
+            <div class="col-sm-12">
+                <h3 class="category_header">Machine Learning</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Basics</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/machine_learning/basics" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Preprocessing Voice</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/machine_learning/preprocessing_voice" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-----------------------------------------------------------------------------
+                                LINUX
+------------------------------------------------------------------------------>
+        <div class="row" id="linux">
+            <div class="col-sm-12">
+                <h3 class="category_header">Linux</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Basics</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/linux/basics" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-----------------------------------------------------------------------------
+                                END
+------------------------------------------------------------------------------>
+    </div>
+</main>
+{{ end }}

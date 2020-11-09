@@ -1,10 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/def74011-5244-42cf-a0cc-d7075f673964/deploy-status)](https://app.netlify.com/sites/brettjgall/deploys)
-
 # Othmane Rifki's Website #
 
 This repository contains the source files for my website, https://othrif.github.io/.
-
-I leverage the [Academic](https://sourcethemes.com/academic/) theme of the [Hugo](https://gohugo.io/) static site generator and [Netlify](https://www.netlify.com/) to build and continuously deploy a fast, clean site from RMarkdown, HTML, and CSS files pushed to this repository.
 
 
 ## To deploy: ##
@@ -26,6 +22,8 @@ cat firstJupyter.md | tee -a index.md
 ``` bash
 rm -rf public/
 git submodule add -f -b master https://github.com/othrif/othrif.github.io.git public
+hugo
+cd public/
 git add .
 git commit -m "Initial commit"
 git push -u origin master

@@ -1,0 +1,10 @@
+name = "Ouka"
+license = "GPL-3.0"
+description = "A bootstrap 4 Hugo theme for notes."
+tags = ["bootstrap", "blog", "font awesome"]
+features = ["responsive", "blog"]
+min_version = 0.25
+
+[author]
+  name = "Othmane Rifki"
+  homepage = "https://othrif.github.io/"

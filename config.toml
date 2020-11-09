@@ -1,0 +1,15 @@
+baseURL = "https://othrif.github.io"
+languageCode = "en-us"
+title = "Othmane Rifki"
+theme = "ouka"
+
+pygmentsCodeFences=true
+pygmentsUseClasses=true
+canonifyURLs=true
+publishDir="public"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+uglyURLs = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["RSS"]
