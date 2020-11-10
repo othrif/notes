@@ -52,7 +52,7 @@
 
 
 <!-----------------------------------------------------------------------------
-                                PYTHON
+                                Machine Learning
 ------------------------------------------------------------------------------>
         <div class="row" id="test">
             <div class="col-sm-12">
@@ -95,6 +95,44 @@
                 </div>
             </div>
         </div>
+
+
+            <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Preprocessing Text</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/machine_learning/preprocessing_text" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">AWS</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/machine_learning/aws" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 <!-----------------------------------------------------------------------------
                                 LINUX
 ------------------------------------------------------------------------------>
