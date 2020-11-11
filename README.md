@@ -1,6 +1,6 @@
 # Othmane Rifki's Website #
 
-This repository contains the source files for my website, https://othrif.github.io/.
+This is Othmane Rifki's collection of personal notes on coding, mathematics, and machine learning. This repository contains the source files for my website, https://othrif.github.io/.
 
 
 ## To deploy: ##
