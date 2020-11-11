@@ -184,7 +184,8 @@ Navbar
 ---------------------------------------------------------*/
 
 .navbar {
-  background-color: #e84038;
+  /*background-color: #e84038;*/
+  background-color: #59b5ea;
   border-bottom: 0px;
 }
 
