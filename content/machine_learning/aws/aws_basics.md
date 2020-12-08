@@ -5,6 +5,11 @@ author: "Othmane Rifki"
 type: technical_note
 draft: false
 ---
+### Copying directory to s3 with structure intact
+``` bash 
+aws s3 sync myDir s3://mybucket --profile dev
+```
+
 ### Recursively copying S3 objects to a local directory
 
 ``` bash 

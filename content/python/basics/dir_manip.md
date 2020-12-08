@@ -15,6 +15,19 @@ if not os.path.exists(path):
     os.mkdir(path)
 ```
 
+### Do something if dir exists (alternative)
+
+
+```python
+import pathlib
+data_dir = pathlib.Path('data/')
+if not data_dir.exists():
+    print('do something')
+```
+
+    do something
+
+
 ### Change directory
 
 
