@@ -9,7 +9,7 @@ draft: false
 
 ### Docker build
 ``` bash 
-docker build --tag hello-world:1.0 .
+docker build -t hello-world:1.0 .
 ```
 
 ### Run image

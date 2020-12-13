@@ -35,10 +35,47 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
+                    <h4 class="card-header">References</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/python/references" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
                     <h4 class="card-header">Basics</h4>
                     <div class="card-body">
                         <ul>
                             {{ $section := site.GetPage "/python/basics" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Docker</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/python/docker" }}
                             {{ with $section }}
                                 {{ range .Pages }}
                                     <li><a href="{{.Permalink}}">{{.Title}}</a></li>
@@ -191,6 +228,7 @@ This site is inspired from <a href="https://github.com/chrisalbon/notes"> this r
                 </div>
             </div>
         </div>
+
 
 <!-----------------------------------------------------------------------------
                                 END
