@@ -35,3 +35,13 @@ ssh-add -K ~/.ssh/id_rsa
 ```
 
 Now you should be able to ssh to your server securely! 
+
+
+### Access server without ssh keys
+If you encounter the error: `Permission denied (publickey).`
+``` bash 
+sudo emacs /etc/ssh/sshd_config
+# Change to: PasswordAuthentication yes
+sudo service sshd reload
+```
+Now if you ssh from a new server, you can access the target server with a password
