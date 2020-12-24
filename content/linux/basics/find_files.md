@@ -39,3 +39,9 @@ find ~/example_directory -type f
 /home/othrif/example_directory/sales.txt,
 /home/othrif/example_directory/marketing.txt,
 ```
+
+
+## Only list dirrectories
+``` bash 
+ls -d path/to/folders/*/
+```
