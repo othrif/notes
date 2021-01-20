@@ -52,3 +52,18 @@ z.shape
     torch.Size([10])
 
 
+
+### Re-arange matrix dimensions
+
+
+```python
+torch.arange(0,6).view(2,3)
+```
+
+
+
+
+    tensor([[0, 1, 2],
+            [3, 4, 5]])
+
+

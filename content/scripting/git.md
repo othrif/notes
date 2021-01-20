@@ -41,7 +41,44 @@ git push --mirror github
 ```
 
 
-
-```python
-
+### Push a newly created repo to git
+``` bash 
+git init
+git add .
+git commit -m "Initial commit with the basic code structure"
+git branch -m master main
+git remote add origin https://github.com/<repo>
+git push -u origin main
 ```
+
+### Number of lines of code
+
+Add the following to `cloc-git`
+``` bash 
+#!/usr/bin/env bash
+git clone --depth 1 "$1" temp-linecount-repo &&
+  printf "('temp-linecount-repo' will be deleted automatically)\n\n\n" &&
+  cloc temp-linecount-repo &&
+  rm -rf temp-linecount-repo%
+```
+Then add it to a folder in your path such as `/usr/local/bin/` and set the proper permission with
+``` bash 
+chmod a+x cloc-git
+```
+
+Find the number of lines with:
+``` bash 
+cloc-git https://github.com/othrif/repo.git
+```
+
+
+### Avoid needing git token each time
+
+When you want to pull/push from git, you will need your username and token. *Note this is different than your github password*.
+
+To avoid needing to enter your credentials everytime, enable local caching of your credentials:
+``` bash 
+git config credential.helper store
+```
+
+You can also use a public ssh key: copy the contents of `~/.ssh/id_rsa.pub` to [github settings](https://github.com/settings/keys)

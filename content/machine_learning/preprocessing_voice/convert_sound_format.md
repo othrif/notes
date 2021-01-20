@@ -11,6 +11,16 @@ draft: false
 sox new.wav new.mp3
 ```
 
+### Convert to a different bit depth and sampling rate
+
+``` bash 
+ffmpeg -i  input.wav -ar 16000 -sample_fmt s16 output.wav
+```
+Available bit depth optons:
+``` bash 
+ffmpeg -sample_fmts
+```
+
 # Convert Numpy to WAV with `wavio`
 `wavio.write` writes a numpy array to a WAV file, optionally using a specified sample width.
 
