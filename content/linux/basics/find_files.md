@@ -45,3 +45,8 @@ find ~/example_directory -type f
 ``` bash 
 ls -d path/to/folders/*/
 ```
+
+## Find directories ignoring `Permission denied`
+``` bash 
+find / -type d -name NAMEofDirectory 2>/dev/null
+```

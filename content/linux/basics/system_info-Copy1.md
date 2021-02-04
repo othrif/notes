@@ -9,6 +9,11 @@ draft: false
 
 To find hadrware information about your linux system, few commmands report useful infromation. If several options are given, they perform similar functions.
 
+### Pretty display of main things!
+``` bash
+sudo apt install inxi
+inxi
+```
 
 ### Linux/kernel information
 ``` bash 
