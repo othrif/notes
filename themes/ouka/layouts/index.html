@@ -264,6 +264,33 @@ This site is inspired from <a href="https://github.com/chrisalbon/notes"> this r
             </div>
         </div>
 
+<!-----------------------------------------------------------------------------
+                                CODING PRACTICE
+------------------------------------------------------------------------------>
+        <div class="row" id="coding">
+            <div class="col-sm-12">
+                <h3 class="category_header">Coding Practice</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Python</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/coding/python" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 <!-----------------------------------------------------------------------------
                                 END

@@ -18,7 +18,10 @@ cat /proc/version
 ### Linux version 
 ``` bash 
 cat /etc/issue
+# or
+lsb_release -a
 ```
+
 
 ### CPU and processing units
 ``` bash 
