@@ -83,3 +83,18 @@ git clone https://github.com/tensorflow/benchmarks
 python benchmarks/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --num_gpus=1 --model resnet50 --batch_size 64
 ```
 compare with https://www.leadergpu.com/tensorflow_resnet50_benchmark
+
+### Suppress warnings With RTX 3090 
+
+In order to suppress the warning: `2021-02-04 08:52:12.943009: W tensorflow/stream_executor/gpu/asm_compiler.cc:235] Your CUDA software stack is old. We fallback to the NVIDIA driver for some compilation. Update your CUDA version to get the best performance. The ptxas error was: ptxas fatal   : Value 'sm_86' is not defined for option 'gpu-name'`
+Do: 
+``` python
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+```
+and the warning: `2021-02-05 04:15:51.619418: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set`
+Do:
+``` python
+import os
+os.environ['TF_XLA_FLAGS'] = '--tf_xla_enable_xla_devices'
+```
