@@ -14,7 +14,7 @@ sox new.wav new.mp3
 ### Convert to a different bit depth and sampling rate
 
 ``` bash 
-ffmpeg -i  input.wav -ar 16000 -sample_fmt s16 output.wav
+ffmpeg -i  input.wav -ac 1 -ar 16000 -sample_fmt s16 output.wav
 ```
 Available bit depth optons:
 ``` bash 
