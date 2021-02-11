@@ -9,6 +9,77 @@ draft: false
 
 Everything in Python is an object. Primitive types are built-in types such as: numerics (integers,etc.), sequences (lists...), mappings (dict), classes, instances, and exceptions.
 
+### Key methods for numeric
+
+
+```python
+import math
+print(f'Absolutve value: {abs(-34.5)}')
+print(f'Round up: {math.ceil(34.5)}')
+print(f'Round down: {math.floor(34.5)}')
+print(f'Max value: {max(34.5, 1000)}')
+print(f'Power: {pow(34.5,2)} OR {34.5**2}')
+print(f'Square root: {math.sqrt(34.5)}')
+```
+
+    Absolutve value: 34.5
+    Round up: 35
+    Round down: 34
+    Max value: 1000
+    Power: 1190.25 OR 1190.25
+    Square root: 5.873670062235365
+
+
+### Interconvert numbers and strings
+
+
+```python
+str(42)
+```
+
+
+
+
+    '42'
+
+
+
+
+```python
+int('42')
+```
+
+
+
+
+    42
+
+
+
+
+```python
+str(87.3)
+```
+
+
+
+
+    '87.3'
+
+
+
+
+```python
+float('87.3')
+```
+
+
+
+
+    87.3
+
+
+
 ### Maximum of numerics
 
 
@@ -24,28 +95,82 @@ print(maxInt, sys.maxsize==2**63-1) # 64-bit machine
 
 
 ```python
-# Bounds on ints
-import sys
-print(sys.int_info)
-```
-
-    sys.int_info(bits_per_digit=30, sizeof_digit=4)
-
-
-
-```python
 # Bounds on floats
-print(sys.float_info)
 sys.float_info.max
 ```
-
-    sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)
-
 
 
 
 
     1.7976931348623157e+308
+
+
+
+
+```python
+# Pseudo max-float / min-float
+print(f'Max float:{float("inf")}, Min float:{float("-inf")}')
+print(f'Inf is larger than max int: {float("inf") > sys.maxsize}')
+```
+
+    Max float:inf, Min float:-inf
+    Inf is larger than max int: True
+
+
+### Best of random
+
+
+```python
+import random
+# randrange([start], stop[, step])
+print(f'randrange(start): {random.randrange(100)}') # 0 to 99 [0,100)
+print(f'randrange(start, stop, step): {random.randrange(0, 100, 2)}') # 0 to 99 [0,100) with setps of 2
+# randint(a, b) = randrange(a,b+1)
+print(f'randint(start, stop): {random.randint(0,100)}') # 0 to 100 [0,100]
+```
+
+    randrange(start): 49
+    randrange(start, stop, step): 58
+    randint(start, stop): 27
+
+
+
+```python
+# Random float:  0.0 <= x < 1.0
+print(f'random(): {random.random()}')
+# Random float:  2.5 <= x < 10.0
+print(f'uniform(): {random.uniform(2.5, 10.0)}')
+```
+
+    random(): 0.09094037940054844
+    uniform(): 5.191762349159088
+
+
+
+```python
+# Randomly shuffle a lit
+A = [1,2,3,4,5]
+random.shuffle(A)
+A
+```
+
+
+
+
+    [3, 4, 2, 1, 5]
+
+
+
+
+```python
+# Single random element from a sequence
+random.choice(['win', 'lose', 'draw'])
+```
+
+
+
+
+    'lose'
 
 
 
@@ -80,13 +205,13 @@ sys.float_info.max
 
 ```python
 # Hex representation
-0o11
+0x11
 ```
 
 
 
 
-    9
+    17
 
 
 
@@ -131,7 +256,7 @@ sys.float_info.max
 
 
 ```python
-# To ordinal value
+# To ordinal value (index of character in utf-8 or ascii)
 ord('a')
 ```
 
@@ -225,6 +350,7 @@ bin(0b10101 & 0b11010)
 
 ```python
 # Bitwise NOT (caution with negative sign in python)
+# 255 = 2^8 -1
 bin(~0b10011100 & 255)
 ```
 
@@ -232,6 +358,36 @@ bin(~0b10011100 & 255)
 
 
     '0b1100011'
+
+
+
+
+```python
+# Function to perform bitwise not operation
+def bit_not(n, numbits=8):
+    return ~n & ((1 << numbits) - 1)
+print(bin(bit_not(0b10011100)))
+
+# Alternative formulation:
+def bit_not(n, numbits=8):
+    return (1 << numbits) - 1 - n
+print(bin(bit_not(0b10011100)))
+```
+
+    0b1100011
+    0b1100011
+
+
+
+```python
+# ~x = -x-1
+~0
+```
+
+
+
+
+    -1
 
 
 
@@ -286,7 +442,7 @@ print(f'{0b100111 << 1} is 2x {0b100111}')
 
 
 ```python
-# restrict to 8 bytes = 2^8-1
+# restrict to 8 bits = 2^8-1
 39 << 3 & 255
 ```
 
@@ -355,37 +511,31 @@ int('0b11010110', 2) # 214 in unsigned same as -42 in signed
 
 
 ```python
-# Bitmask: getting a bit
+# Bitmask operations: 
+# value OP (1 << bit_index)
+# getting a bit => &
+# setting a bit => |
+# unsetting a bit => | ~
+# toggling a bit => ^
 ```
 
 
 ```python
-# suppress all bitss except desired one: 2 ^ bit index
+# getting a bit
+
+# suppress all bits except desired one (2 ^ bit index)
 def get_bit(value, bit_index):
     return value & (1 << bit_index)
-get_bit(0b10100000, bit_index=5)
-```
+print(get_bit(0b10100000, bit_index=5))
 
-
-
-
-    32
-
-
-
-
-```python
 # yes or no answer
 def get_normalized_bit(value, bit_index):
     return (value >> bit_index) & 1
-get_normalized_bit(0b10100000, bit_index=5)
+print(get_normalized_bit(0b10100000, bit_index=5))
 ```
 
-
-
-
+    32
     1
-
 
 
 
@@ -420,7 +570,7 @@ bin(clear_bit(0b11111111, bit_index=5))
 
 
 ```python
-# toggle bit on/off
+# toggle a bit on/off
 def toggle_bit(value, bit_index):
     return value ^ (1 << bit_index)
 x = 0b10100000
@@ -452,3 +602,6 @@ print(fruits - veggies)
     {'eggplant', 'apple', 'banana'}
     {'apple', 'banana'}
 
+
+### Important notations
+`a >>= b` means `a = a >> b`
