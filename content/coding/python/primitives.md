@@ -605,3 +605,73 @@ print(fruits - veggies)
 
 ### Important notations
 `a >>= b` means `a = a >> b`
+
+### Important tricks
+
+
+```python
+# x & (x-1): erase the lowest set bit
+print(bin(1833))
+print(bin(1832))
+print(bin(1833 & 1832))
+```
+
+    0b11100101001
+    0b11100101000
+    0b11100101000
+
+
+
+```python
+# x & ~(x-1): isolates the lowest set bit
+print(bin(1833))
+print(bin(1832))
+print(bin(1833 & ~1832))
+```
+
+    0b11100101001
+    0b11100101000
+    0b1
+
+
+
+```python
+# Number of digits in a number
+import math
+math.floor(math.log10(12345))+1
+```
+
+
+
+
+    5
+
+
+
+
+```python
+# Get the least significant digit
+12345 % 10
+```
+
+
+
+
+    5
+
+
+
+
+```python
+# Get the most significant digit
+num_digits = math.floor(math.log10(12345))+1
+mask = 10**(num_digits-1)
+12345 // mask
+```
+
+
+
+
+    1
+
+
