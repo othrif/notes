@@ -13,6 +13,7 @@ Arrays in python are of `list` type that is dynamically resized. The `tuple` is 
 
 
 ```python
+# Manipulate list
 A = list(range(10))
 print(f'len() of A: {len(A)}')
 A.append(5)
@@ -21,12 +22,22 @@ A.remove(5)
 print(f'remove() first occurence from A: {A}')
 A.insert(1, 999)
 print(f'insert() first occurence from A: {A}')
+print(f'min() of A: {min(A)}')
+print(f'max() of A: {max(A)}')
+del A[1]
+print(f'del element with index i of A: {A}')
+del A[:4]
+print(f'del a range of elements of A: {A}')
 ```
 
     len() of A: 10
     append() to A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 5]
     remove() first occurence from A: [0, 1, 2, 3, 4, 6, 7, 8, 9, 5]
     insert() first occurence from A: [0, 999, 1, 2, 3, 4, 6, 7, 8, 9, 5]
+    min() of A: 0
+    max() of A: 999
+    del element with index i of A: [0, 1, 2, 3, 4, 6, 7, 8, 9, 5]
+    del a range of elements of A: [4, 6, 7, 8, 9, 5]
 
 
 ### Copy
@@ -98,7 +109,227 @@ print(f'Original list NOT modified: {a}')
     Original list NOT modified: [[1, 2], [2, 4]]
 
 
+### Binary search for sorted list
+* `bisect` module maintains a list in sorted order without having to sort the list after each insertion  
+
 
 ```python
-
+# index where the element needs to be inserted in a sorted list 
+import bisect
+A = list(range(10))
+print(A)
+bisect.bisect(A, 6) # similar to bisect.bisect_right()
 ```
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+
+
+    7
+
+
+
+
+```python
+# if element exist, return index of the left of it
+print(A)
+bisect.bisect_left(A, 6) # similar to bisect.bisect_right()
+```
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+
+
+    6
+
+
+
+
+```python
+# insert the element and not just the index
+A = list(range(10))
+print(A)
+bisect.insort(A, 7) # same as bisect.insort_right()
+print(A)
+```
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [0, 1, 2, 3, 4, 5, 6, 7, 7, 8, 9]
+
+
+### Sorting  
+
+
+```python
+# reverse in-place
+A = list(range(10))
+A.reverse()
+print(A)
+```
+
+    [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+
+
+```python
+# return an iterator
+A = list(range(10))
+for i in reversed(A): print(i, end=',')
+```
+
+    9,8,7,6,5,4,3,2,1,0,
+
+
+```python
+# sort in-place
+A = [4,3,2,1,0]
+A.sort()
+print(A)
+```
+
+    [0, 1, 2, 3, 4]
+
+
+
+```python
+# returns a copy
+A = [4,3,2,1,0]
+sorted(A)
+```
+
+
+
+
+    [0, 1, 2, 3, 4]
+
+
+
+### Slicing
+
+
+```python
+# note the range is [0,5)
+A = list(range(10))
+A[0:5]
+```
+
+
+
+
+    [7, 8]
+
+
+
+
+```python
+# from the back
+A[-3:-1]
+```
+
+
+
+
+    [7, 8]
+
+
+
+
+```python
+# skip n=2
+A[0:5:2] 
+```
+
+
+
+
+    [0, 2, 4]
+
+
+
+
+```python
+# reverse with [::-1]
+A[::-1] 
+```
+
+
+
+
+    [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+
+
+
+```python
+# rotate a list
+A[5:] + A[:5]
+```
+
+
+
+
+    [5, 6, 7, 8, 9, 0, 1, 2, 3, 4]
+
+
+
+### List comprehension
+`[<expression> for element in <iterator over sequence> <logical condition>]`
+
+
+```python
+[x**2 for x in range(6) if x%2==0]
+```
+
+
+
+
+    [0, 4, 16]
+
+
+
+
+```python
+# multiple levels
+A = [1,2,3]
+B = ['a', 'b']
+[(x,y) for x in A for y in B]
+```
+
+
+
+
+    [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b'), (3, 'a'), (3, 'b')]
+
+
+
+
+```python
+# convert 2D to 1D
+M = [['a', 'b', 'c'],['d', 'e']]
+[x for row in M for x in row]
+```
+
+
+
+
+    ['a', 'b', 'c', 'd', 'e']
+
+
+
+
+```python
+# 2 level looping
+M = [[1,2,3], [4,5,6]]
+[[x**2 for x in row] for row in M]
+```
+
+
+
+
+    [[1, 4, 9], [16, 25, 36]]
+
+
