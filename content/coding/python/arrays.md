@@ -333,3 +333,67 @@ M = [[1,2,3], [4,5,6]]
     [[1, 4, 9], [16, 25, 36]]
 
 
+
+### Useful tips
+* Use of `next(iterator[, default])`
+
+
+```python
+# remove the leading zeros
+res = [0,0,1,2,3,4]
+res[next((i for i,x in enumerate(res) if x!=0)):]
+```
+
+
+
+
+    [1, 2, 3, 4]
+
+
+
+
+```python
+# what if they are all zeros
+res = [0,0,0,0,0]
+res[next((i for i,x in enumerate(res) if x!=0), len(res)):]
+```
+
+
+
+
+    []
+
+
+
+* `for-else` statement: search through a list and process each item until a flag item is found and then stop processing
+
+
+```python
+# Loop until something is found
+mylist=[1,2,3]
+for i in mylist:
+    if i == 5:
+        break
+    print(i)
+else:
+    raise ValueError("List argument missing terminal flag.")
+```
+
+    1
+    2
+    3
+
+
+
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-8-9dbebae898f3> in <module>
+          6     print(i)
+          7 else:
+    ----> 8     raise ValueError("List argument missing terminal flag.")
+    
+
+    ValueError: List argument missing terminal flag.
+
