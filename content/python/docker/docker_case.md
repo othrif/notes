@@ -7,6 +7,25 @@ draft: false
 ---
 # Basics
 
+### In a nutshell:
+``` bash
+docker build -t imagename:local -f Dockerfile ./
+docker run --rm -it imagename:local /bin/bash
+docker push dockerhubname
+VERSION=`git tag -l |sort -V | tail -1 | sed 's/v//'`
+docker tag dockerhubname dockerhubname:$(VERSION)
+docker push dockerhubname:$(VERSION)
+```
+
+### Checkout docker image from repo to test it
+``` bash 
+$ docker build -t imagename:local ./
+$ docker run --rm -it imagename:local  /bin/bash
+```
+ > `root@6efdfbae85a8:/#`
+Then in another terminal: `docker cp $HOME/path/to/project 6efdfbae85a8:/root/project` to get the project inside for testing.
+
+
 ### Docker build
 ``` bash 
 docker build -t hello-world:1.0 .
@@ -105,6 +124,11 @@ docker ps -a # get <IMAGE> and <CONTAINER ID>
 docker run -d -it -p 8000:8080 <IMAGE> /usr/bin/top # <IMAGE>=othrif:mytest
 docker exec -it <CONTAINER ID> /bin/bash
 
+```
+
+Alternatively run interactively and remove image after exit
+``` bash 
+docker run --rm -it <IMAGE> /bin/bash
 ```
 
 ### Start Docker deamon

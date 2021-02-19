@@ -205,6 +205,24 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Jupyter</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/machine_learning/jupyter" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!-----------------------------------------------------------------------------
                                 LINUX
 ------------------------------------------------------------------------------>

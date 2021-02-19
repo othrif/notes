@@ -82,3 +82,11 @@ git config credential.helper store
 ```
 
 You can also use a public ssh key: copy the contents of `~/.ssh/id_rsa.pub` to [github settings](https://github.com/settings/keys)
+
+### Hard reset to a remote repository
+
+If you do something wrong and want to reset:
+``` bash 
+git fetch origin
+git reset --hard origin/main
+```
