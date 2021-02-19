@@ -23,6 +23,33 @@ git commit -m "added a new branch from old commit"
 git push --set-upstream origin <new branch>
 ```
 
+### Tag code version
+``` bash 
+git checkout main
+git pull
+git tag -a v0.1.2 -m "tag message"
+git push origin v0.1.2 # single tag
+# git push origin <tag> # push all tags
+```
+
+### Hard reset to a remote repository
+
+If you do something wrong and want to reset:
+``` bash 
+git fetch origin
+git reset --hard origin/main
+```
+
+### Push a newly created repo to git
+``` bash 
+git init
+git add .
+git commit -m "Initial commit with the basic code structure"
+git branch -m master main
+git remote add origin https://github.com/<repo>
+git push -u origin main
+```
+
 ### Remove submodule
 To remove a submodule from a git repository you need to:
 
@@ -40,16 +67,6 @@ git remote add github https://github.com/othrif/vbfmet-recast.git
 git push --mirror github
 ```
 
-
-### Push a newly created repo to git
-``` bash 
-git init
-git add .
-git commit -m "Initial commit with the basic code structure"
-git branch -m master main
-git remote add origin https://github.com/<repo>
-git push -u origin main
-```
 
 ### Number of lines of code
 
@@ -82,11 +99,3 @@ git config credential.helper store
 ```
 
 You can also use a public ssh key: copy the contents of `~/.ssh/id_rsa.pub` to [github settings](https://github.com/settings/keys)
-
-### Hard reset to a remote repository
-
-If you do something wrong and want to reset:
-``` bash 
-git fetch origin
-git reset --hard origin/main
-```
