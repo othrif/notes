@@ -389,11 +389,30 @@ else:
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-8-9dbebae898f3> in <module>
+    <ipython-input-1-9dbebae898f3> in <module>
           6     print(i)
           7 else:
     ----> 8     raise ValueError("List argument missing terminal flag.")
     
 
     ValueError: List argument missing terminal flag.
+
+
+### `get() dict`
+`dictionary.get(keyname, value)` returns the value of the item with the specified key and value if key does not exist
+
+
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.get("price", 15000)
+
+print(x)
+```
+
+    15000
 
