@@ -416,3 +416,133 @@ print(x)
 
     15000
 
+
+### `any()` and `all()`
+* `any()` sequence of OR operations on the provided iterables. Stops the execution as soon as the result is known.
+* `all()` sequence of AND operations on the provided iterables. Stops the execution as soon as the result is known.
+
+
+```python
+# short circuits after second element
+print (any([False, True, False, False]))  
+```
+
+    True
+
+
+
+```python
+# short circuits at the first element
+print (all([False, True, True, False]))
+```
+
+    False
+
+
+### Checking for duplicates
+
+
+```python
+def has_duplicates(block):
+    return len(block) != len(set(block))
+a=[1,2,3,1]
+print(has_duplicates(a))
+```
+
+    True
+
+
+### Filter + lambda vs. list comprehension
+Time is very close between the two, thought list comprehension slighlty faster.
+
+
+```python
+import timeit
+block=[1,0,3,1,0]
+time1=timeit.timeit(str(list(filter(lambda x: x != 0, block))), number=100000000)
+print(time1)
+time2=timeit.timeit(str([x for x in block if x != 0]), number=100000000)
+print(time2)
+```
+
+    3.8697273540000197
+    3.6555018579999796
+
+
+### Loop over sub-blocks of a matrix
+Useful when doing convolutions
+
+
+```python
+# Example with 9x9 matrix and sub-block of 3x3
+import math
+M = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 2, 0, 0], [0, 0, 0, 0, 6, 0, 4, 0, 0], [0, 0, 0, 2, 0, 0, 0, 0, 5], [7, 0, 0, 0, 0, 0, 0, 0, 0], [0, 8, 3, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 0], [0, 0, 4, 0, 0, 0, 0, 0, 0]]
+m = len(M)
+n = int(math.sqrt(m))
+
+# Original matrix
+print('Original matrix:')
+for i in range(m):
+    for j in range(m):
+        print(M[i][j], end=', ')
+    print('')
+print('---')
+print('Sub-blocks of the matrix:')
+for i in range(n):
+    for j in range(n):
+        for a in range(i*n, (i+1)*n):
+            for b in range(j*n, (j+1)*n):
+                print(M[a][b], end=',')
+            print('')
+        print('---')
+```
+
+    Original matrix:
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 1, 2, 0, 0, 
+    0, 0, 0, 0, 6, 0, 4, 0, 0, 
+    0, 0, 0, 2, 0, 0, 0, 0, 5, 
+    7, 0, 0, 0, 0, 0, 0, 0, 0, 
+    0, 8, 3, 0, 0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 0, 3, 3, 0, 
+    0, 0, 4, 0, 0, 0, 0, 0, 0, 
+    ---
+    Sub-blocks of the matrix:
+    0,0,0,
+    0,0,0,
+    0,0,0,
+    ---
+    0,0,0,
+    0,0,0,
+    0,0,1,
+    ---
+    0,0,0,
+    0,0,0,
+    2,0,0,
+    ---
+    0,0,0,
+    0,0,0,
+    7,0,0,
+    ---
+    0,6,0,
+    2,0,0,
+    0,0,0,
+    ---
+    4,0,0,
+    0,0,5,
+    0,0,0,
+    ---
+    0,8,3,
+    0,0,0,
+    0,0,4,
+    ---
+    0,0,0,
+    0,0,0,
+    0,0,0,
+    ---
+    0,0,0,
+    3,3,0,
+    0,0,0,
+    ---
+

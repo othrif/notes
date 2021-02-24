@@ -96,6 +96,7 @@ When you want to pull/push from git, you will need your username and token. *Not
 To avoid needing to enter your credentials everytime, enable local caching of your credentials:
 ``` bash 
 git config credential.helper store
+git config --global credential.helper cache
 ```
 
 You can also use a public ssh key: copy the contents of `~/.ssh/id_rsa.pub` to [github settings](https://github.com/settings/keys)
