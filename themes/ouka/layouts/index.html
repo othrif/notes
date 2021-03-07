@@ -87,6 +87,23 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Numpy</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/python/numpy" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <!-----------------------------------------------------------------------------
                                 Machine Learning
