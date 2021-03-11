@@ -1,10 +1,31 @@
 ---
-title: "Config file using click"
+title: "CLI arguments and config with click"
 date: 2020-04-12T14:41:32+02:00
 author: "Othmane Rifki"
 type: technical_note
 draft: false
 ---
+### Basic usage of click
+
+Command line arguments get passed to a function that you then call later on.
+
+``` python
+import click
+
+@click.command()
+@click.option('-f', '--first', default='first')
+@click.option('-s', '--second', default=10)
+
+
+def test(first, second):
+    print('First', first)
+    print('Second', second)
+
+
+test()
+```
+
+
 ### Using click with config file
 
 Using the module `click_config_file` we can load the parameter file similar to this:

@@ -14,3 +14,16 @@ very neat comment
 in bash
 '
 ```
+
+### Output common lines between two files
+
+``` bash 
+grep -Fxf file1 file2 # using grep
+sort file1 file2 | uniq -d # using sort
+```
+
+
+
+```python
+
+```

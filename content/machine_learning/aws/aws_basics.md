@@ -7,7 +7,7 @@ draft: false
 ---
 ### Copying directory to s3 with structure intact
 ``` bash 
-aws s3 sync myDir s3://mybucket --profile dev
+aws s3 sync myDir s3://mybucket --profile prototype
 ```
 
 ### Recursively copying S3 objects to a local directory
@@ -39,4 +39,9 @@ aws s3 cp test.txt s3://mybucket/test2.txt --profile prototype
 ### Copying a file from S3 to S3
 ``` bash 
 aws s3 cp s3://mybucket/test.txt s3://mybucket/test2.txt --profile prototype
+```
+
+### Rename folder in S3
+``` bash 
+aws s3 mv s3://mybucket/folder_name_from/ s3://mybucket/folder_name_to/ --recursive --profile prototype
 ```
