@@ -52,3 +52,17 @@ pipenv --python X.Y
 ``` bash 
 pipenv install requests~=1.2
 ```
+
+### Install from a website
+``` bash 
+# Need to keep the correct python 3.9 version -> 39
+pipenv install https://download.pytorch.org/whl/cu111/torch-1.8.0%2Bcu111-cp39-cp39-linux_x86_64.whl
+
+# below runs but does not save it to Pipfile
+pipenv run pip install torch==1.8.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+### Install from git
+``` bash 
+pipenv install -e git+https://github.com/requests/requests.git@v2.20.1#egg=requests
+```
