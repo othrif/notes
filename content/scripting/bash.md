@@ -22,8 +22,14 @@ grep -Fxf file1 file2 # using grep
 sort file1 file2 | uniq -d # using sort
 ```
 
-
-
-```python
-
+### Replace white space with underscore in filename
+``` bash 
+for f in *; do mv "$f" `echo $f | tr ' ' '_'`; done
 ```
+
+### Processing a large number of files
+To avoid the error `Argument list too long`:
+``` bash 
+ls | xargs -n 32 -P 8 cat >> ../saved_output
+```
+The xargs utility will take the output of ls, break it into chunks of 32 (32 arguments) and spawn up to 8 concurrent cat processes.  cat will be respawned  as long as their is data coming from ls.

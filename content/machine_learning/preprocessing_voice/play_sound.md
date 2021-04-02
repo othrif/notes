@@ -151,7 +151,5 @@ plt.show()
 
 
 
-    
 ![png](play_sound_14_2.png)
-    
 
