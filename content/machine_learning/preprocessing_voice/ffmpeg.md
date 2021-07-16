@@ -8,5 +8,5 @@ draft: false
 Calculate the total time of all audio files at a location.
 
 ``` bash 
-ffmpeg -ss START_TIME_IN_MS -t DURATION_IN_MS -i INPUT OUTPUT.mp4
+ffmpeg -ss START_TIME_IN_S -t DURATION_IN_S -i INPUT OUTPUT.mp4
 ```

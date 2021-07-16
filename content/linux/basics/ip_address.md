@@ -29,6 +29,10 @@ hostname -I
 ```
 
 # Setup ssh port forwarding
+
+### Change ip address in http://routerlogin.net/ for Netgear
+
+
 * Add the host internal ip address to your router's port forwarding service
 * Modify the default port in the host by accessing `/etc/ssh/sshd_config`
 * Some good tips here: https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer

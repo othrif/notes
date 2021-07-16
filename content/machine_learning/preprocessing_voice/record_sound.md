@@ -47,5 +47,7 @@ plt.plot(myrecording)
 
 
 
+    
 ![png](record_sound_5_1.png)
+    
 

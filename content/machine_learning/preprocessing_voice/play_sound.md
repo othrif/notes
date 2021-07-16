@@ -18,6 +18,11 @@ From `sox`:
 play existing-file.wav
 ```
 
+With start and end delimiters
+``` bash 
+play existing-file.wav trim <start> <duration>
+```
+
 # Play sound in Jupyter
 
 
@@ -151,5 +156,7 @@ plt.show()
 
 
 
+    
 ![png](play_sound_14_2.png)
+    
 

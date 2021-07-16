@@ -22,7 +22,9 @@ plt.show()
 ```
 
 
+    
 ![png](meshgrid_2_0.png)
+    
 
 
 ### Univariate gaussian distribution
@@ -50,7 +52,9 @@ plt.show()
 ```
 
 
+    
 ![png](meshgrid_4_0.png)
+    
 
 
 ### How about some correlation
@@ -87,5 +91,7 @@ h = plt.contourf(x,y,z)
 ```
 
 
+    
 ![png](meshgrid_6_0.png)
+    
 

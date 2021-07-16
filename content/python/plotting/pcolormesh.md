@@ -25,5 +25,7 @@ plt.show()
 ```
 
 
+    
 ![png](pcolormesh_2_0.png)
+    
 

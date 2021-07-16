@@ -33,3 +33,8 @@ To avoid the error `Argument list too long`:
 ls | xargs -n 32 -P 8 cat >> ../saved_output
 ```
 The xargs utility will take the output of ls, break it into chunks of 32 (32 arguments) and spawn up to 8 concurrent cat processes.  cat will be respawned  as long as their is data coming from ls.
+
+### Randomly select N files
+``` bash 
+ls | shuf -n 50
+```

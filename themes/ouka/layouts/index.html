@@ -105,6 +105,41 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Plotting</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/python/plotting" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Pandas</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/python/pandas" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!-----------------------------------------------------------------------------
                                 Machine Learning
 ------------------------------------------------------------------------------>
@@ -240,6 +275,42 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Scikit-Learn</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/machine_learning/scikitlearn" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">ONNX</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/machine_learning/onnx" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!-----------------------------------------------------------------------------
                                 LINUX
 ------------------------------------------------------------------------------>
@@ -326,6 +397,33 @@ This site is inspired from <a href="https://github.com/chrisalbon/notes"> this r
             </div>
         </div>
 
+
+<!-----------------------------------------------------------------------------
+                                ALGORITHMS
+------------------------------------------------------------------------------>
+        <div class="row" id="python">
+            <div class="col-sm-12">
+                <h3 class="category_header">Algorithms</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">Speech recognition</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ $section := site.GetPage "/algorithms/advanced" }}
+                            {{ with $section }}
+                                {{ range .Pages }}
+                                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <!-----------------------------------------------------------------------------
                                 END
