@@ -60,9 +60,7 @@ plt.show()
 ```
 
 
-    
 ![png](kernel_svm_5_0.png)
-    
 
 
 #### Train an algorithm
@@ -96,7 +94,5 @@ plt.show()
 ```
 
 
-    
 ![png](kernel_svm_9_0.png)
-    
 

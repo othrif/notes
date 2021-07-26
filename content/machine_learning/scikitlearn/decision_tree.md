@@ -101,9 +101,7 @@ plt.show()
 
 
 
-    
 ![png](decision_tree_13_1.png)
-    
 
 
 ### Visualize tree
@@ -142,9 +140,7 @@ Image(filename='tree.png', width=600)
 
 
 
-    
 ![png](decision_tree_16_0.png)
-    
 
 
 
@@ -175,9 +171,7 @@ plt.show()
 
 
 
-    
 ![png](decision_tree_18_1.png)
-    
 
 
 ### Feature importance
@@ -219,7 +213,5 @@ plt.show()
 
 
 
-    
 ![png](decision_tree_20_1.png)
-    
 

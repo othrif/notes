@@ -38,7 +38,5 @@ plt.show()
 ```
 
 
-    
 ![png](plot_iri_2_0.png)
-    
 

@@ -38,3 +38,20 @@ The xargs utility will take the output of ls, break it into chunks of 32 (32 arg
 ``` bash 
 ls | shuf -n 50
 ```
+
+### Replace string in file 
+
+#### OSX
+``` bash 
+sed -i '' 's/resources\/input\//\/Users\/othrif\/projects\/aoede\/resources\/input\/versioned\/v1\//g' *txt
+```
+
+#### Linux
+``` bash 
+sed 's/resources\/input\//\/Users\/othrif\/projects\/aoede\/resources\/input\/versioned\/v1\//g' *txt
+```
+
+### Diff between two commands
+``` bash 
+diff <(ls file1) <(ls file2)
+```

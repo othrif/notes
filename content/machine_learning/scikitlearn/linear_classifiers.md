@@ -114,7 +114,5 @@ plt.show()
 
 
 
-    
 ![png](linear_classifiers_14_1.png)
-    
 

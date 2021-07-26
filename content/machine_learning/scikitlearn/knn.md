@@ -72,7 +72,5 @@ plt.show()
 
 
 
-    
 ![png](knn_5_2.png)
-    
 

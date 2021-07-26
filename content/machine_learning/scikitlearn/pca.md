@@ -74,9 +74,7 @@ plt.show()
 ```
 
 
-    
 ![png](pca_5_0.png)
-    
 
 
 ### PCA with k dimensions
@@ -97,9 +95,7 @@ plt.show()
 ```
 
 
-    
 ![png](pca_8_0.png)
-    
 
 
 ### Kernel PCA
@@ -126,7 +122,5 @@ plt.show()
 ```
 
 
-    
 ![png](pca_10_0.png)
-    
 

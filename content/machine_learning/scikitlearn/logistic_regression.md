@@ -120,7 +120,5 @@ plt.show()
 ```
 
 
-    
 ![png](logistic_regression_8_0.png)
-    
 

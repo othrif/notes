@@ -20,7 +20,5 @@ plt.show()
 ```
 
 
-    
 ![png](cumsum_1_0.png)
-    
 
