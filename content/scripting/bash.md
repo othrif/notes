@@ -55,3 +55,8 @@ sed 's/resources\/input\//\/Users\/othrif\/projects\/aoede\/resources\/input\/ve
 ``` bash 
 diff <(ls file1) <(ls file2)
 ```
+
+### Find size of all files including hidden files
+``` bash 
+du -shc .[^.]* *
+```
