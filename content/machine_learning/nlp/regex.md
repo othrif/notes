@@ -5,6 +5,8 @@ author: "Othmane Rifki"
 type: technical_note
 draft: false
 ---
+Extremely useful to understand what the pattern means: https://regexr.com/
+
 # `re.search()` pattern
 ``` python
 match = re.search(pat, str)
@@ -280,3 +282,34 @@ The function searches for all the instances of pattern in the given string, and 
 
     purple alice@yo-yo-dyne.com, blah monkey bob@yo-yo-dyne.com blah dishwasher
 
+
+# Non-capturing group
+
+
+```python
+re.findall(r'(?:ha)+', 'hahaha haa hah!')
+```
+
+
+
+
+    ['hahaha', 'ha', 'ha']
+
+
+
+
+```python
+re.findall(r'(ha)+', 'hahaha haa hah!')
+```
+
+
+
+
+    ['ha', 'ha', 'ha']
+
+
+
+
+```python
+
+```
