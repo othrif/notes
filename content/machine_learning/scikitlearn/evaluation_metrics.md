@@ -187,18 +187,6 @@ print_results(y_pred,y_test)
 
 
 ```python
-scipy_version
-```
-
-
-
-
-    '1.7.0'
-
-
-
-
-```python
 from sklearn.metrics import roc_curve, auc
 from distutils.version import LooseVersion as Version
 from scipy import __version__ as scipy_version
@@ -219,7 +207,6 @@ pipe_lr = make_pipeline(StandardScaler(),
                                            C=100.0))
 
 X_train2 = X_train[:, [4, 14]]
-    
 
 cv = list(StratifiedKFold(n_splits=3).split(X_train, y_train))
 
@@ -232,6 +219,7 @@ all_tpr = []
 for i, (train, test) in enumerate(cv):
     probas = pipe_lr.fit(X_train2[train],
                          y_train[train]).predict_proba(X_train2[test])
+    
 
     fpr, tpr, thresholds = roc_curve(y_train[test],
                                      probas[:, 1],
@@ -273,5 +261,10 @@ plt.show()
 ```
 
 
-![png](evaluation_metrics_13_0.png)
+![png](evaluation_metrics_12_0.png)
 
+
+
+```python
+
+```

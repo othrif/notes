@@ -30,11 +30,15 @@ hostname -I
 
 # Setup ssh port forwarding
 
-### Change ip address in http://routerlogin.net/ for Netgear
+### Router
+* Netgear: change ip address in http://routerlogin.net/
+* AT&T: Add your device to allow portforwarding https://www.att.com/support/article/u-verse-high-speed-internet/KM1215101
 
+### Configuration
 
 * Add the host internal ip address to your router's port forwarding service
 * Modify the default port in the host by accessing `/etc/ssh/sshd_config`
+* Restart the ssh service with `sudo systemctl restart ssh`
 * Some good tips here: https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer
 
 
