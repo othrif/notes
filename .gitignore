@@ -25,3 +25,6 @@
 
 # temporary files
 *~
+
+# python builds
+__pycache__
