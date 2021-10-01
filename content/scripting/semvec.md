@@ -5,6 +5,15 @@ author: "Othmane Rifki"
 type: technical_note
 draft: false
 ---
+### Branch name
+
+`<type>/<name>/<scope>`
+
+Example:
+``` bash
+feat/myname/stream
+```
+
 See: https://semver.org/
 
 
