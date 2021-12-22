@@ -21,6 +21,32 @@ Available bit depth optons:
 ffmpeg -sample_fmts
 ```
 
+# Convert in Python
+
+``` python
+import subprocess
+
+in_file = "test.webm"
+out_file = "test.wav"
+
+subprocess.run(
+    [
+        "ffmpeg",
+        "-i",
+        in_file,
+        "-ar",
+        "16000",
+        "-ac",
+        "1",
+        "-sample_fmt",
+        "s16",
+        out_file,
+    ],
+    stdout=subprocess.PIPE,
+    stderr=subprocess.STDOUT,
+)
+```
+
 # Convert Numpy to WAV with `wavio`
 `wavio.write` writes a numpy array to a WAV file, optionally using a specified sample width.
 

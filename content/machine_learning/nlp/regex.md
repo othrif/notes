@@ -17,7 +17,8 @@ match = re.search(pat, str)
 * a, X, 9, < -- ordinary characters just match themselves exactly. Meta-characters don't: . ^ $ * + ? { [ ] \ | ( )   
 
 * . (a period) -- matches any single character except newline '\n'    
-* \w -- (lowercase w) matches a "word" character: a letter or digit or underbar [a-zA-Z0-9_]. \W (upper case W) matches any non-word character   
+* \w -- (lowercase w) matches a "word" character: a letter or digit or underbar [a-zA-Z0-9_].   
+* \W (upper case W) matches any non-word character   
 * \b -- boundary between word and non-word   
 * \s -- (lowercase s) matches a single whitespace character. \S (upper case S) matches any non-whitespace character   
 * \t, \n, \r -- tab, newline, return   
